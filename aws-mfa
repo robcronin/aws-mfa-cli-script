@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $1 == "-t" ]; then
+    cat {ABSOLUTE_PATH_TO_REPO}/aws-mfa-helpers/aws-mfa-last-called.txt
+    exit
+fi
+node {ABSOLUTE_PATH_TO_REPO}/aws-mfa-helpers/run-aws-mfa.mjs $1 $2 $3
